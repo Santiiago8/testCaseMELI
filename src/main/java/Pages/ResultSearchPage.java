@@ -9,16 +9,16 @@ public class ResultSearchPage extends BasePage{
     }
 
     By PRICE = By.xpath("//div[@class='ui-search-money-picker-dt-title']");
-    By CONDICION = By.xpath("//div[@class='ui-search-filter-dt-title shops-custom-primary-font'])[2]");
+    By CONDITION = By.xpath("(//div[@class='ui-search-filter-dt-title shops-custom-primary-font'])[2]");
 
-    By FIRST_PRODUCT = By.xpath("//li[@class='ui-search-layout__item'])[1]");
+    By FIRST_PRODUCT = By.xpath("(//li[@class='ui-search-layout__item'])[1]");
 
-    public void getPrice(){
-        findElementByLocator(PRICE).getText();
+    public String getPrice(){
+        return findElementByLocator(PRICE).getText();
     }
 
-    public void getCondicion(){
-        findElementByLocator(CONDICION).getText();
+    public String getCondition(){
+        return findElementByLocator(CONDITION).getText();
     }
 
     public void selectFirstProduct(){

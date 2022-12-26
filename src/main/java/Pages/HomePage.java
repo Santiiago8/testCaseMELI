@@ -13,7 +13,7 @@ public class HomePage extends BasePage{
     By BUTTON_SEARCH =  By.xpath("//button[@class='nav-search-btn']");
 
     public void completeWithProduct (String product){
-        completeElementWithKeys(INPUT_SEARCH, Keys.valueOf(product));
+        completeElementWithStrg(INPUT_SEARCH, product);
     }
 
     public void selectSearch(){
